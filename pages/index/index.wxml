@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+
+  <cover-image src="../../images/bkg_login.png"></cover-image>
+  
+  <text class="appSlogan">你好，</text>
+  
+  <text class="appSlogan2">欢迎来到方圆</text>
+
+  <view class="loginType">
+    <text class="userLogin">用户登录</text>
+    <view class="emptyView"></view>
+    <text class="companyLogin">用户登录</text>
+  </view>
+  
+  <view class="mobileInputContain">
+    <image class="phonePic" src="../../images/icon_login_phone.png" mode="aspectFill"></image>
+  </view>
+</view>

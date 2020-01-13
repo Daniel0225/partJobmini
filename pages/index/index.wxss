@@ -1,0 +1,41 @@
+/**index.wxss**/
+.container{
+  display: flex;
+  padding: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.appSlogan{
+  position: absolute;
+  left: 80rpx;
+  top: 120rpx;
+  color: white;
+  font-size: 40rpx;
+}
+.appSlogan2{
+  position: absolute;
+  left: 80rpx;
+  top: 180rpx;
+  color: white;
+  font-size: 40rpx;
+}
+.loginType{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+  align-self: center;
+}
+.userLogin{
+  color: #F1924A;
+}
+.emptyView{
+  width: 30px;
+}
+.mobileInputContain{
+  background-color: greenyellow;
+}
+.phonePic{
+  width: 30rpx;
+  height: 40rpx;
+}
