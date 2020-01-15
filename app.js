@@ -1,5 +1,8 @@
 //app.js
 App({
+  config: {
+    host: 'http://106.13.38.140:7001/' // 这个地方填写你的域名
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -34,6 +37,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+     userId: ""
   }
 })

@@ -1,19 +1,36 @@
 <!--index.wxml-->
 <view class="container">
 
-  <cover-image src="../../images/bkg_login.png"></cover-image>
+  <image class="topImage" src="../../images/bkg_login.png">
+  
+  </image>
   
   <text class="appSlogan">你好，</text>
   
   <text class="appSlogan2">欢迎来到方圆</text>
 
   <view class="loginType">
-    <text class="userLogin">用户登录</text>
+    <text class="{{currentTab == 0? 'userLogin' : 'companyLogin'}}" bindtap="selectUser">用户登录</text>
     <view class="emptyView"></view>
-    <text class="companyLogin">用户登录</text>
+    <text class="{{currentTab == 1? 'userLogin' : 'companyLogin'}}" bindtap="selectCompany">商户登录</text>
   </view>
   
   <view class="mobileInputContain">
     <image class="phonePic" src="../../images/icon_login_phone.png" mode="aspectFill"></image>
+    <input class="mobileInput" bindinput="accountInput" type="number" placeholder="请输入手机号" value="{{account}}"></input>
+  </view>
+  <text class="mobileLine"></text>
+
+  <view class="pwdInputContain">
+    <image class="phonePic" src="../../images/icon_login_password.png" mode="aspectFill"></image>
+    <input class="pwdInput" bindinput="passwordInput" placeholder="请输入密码" password="true" value='{{password}}'></input>
+  </view>
+  <text class="mobileLine"></text>
+
+  <button class="loginBtn" bindtap="getToken">登录</button>
+
+  <view class="registContain">
+    <text class="registNow">立即注册</text>
+    <text class="forgetPwd">忘记密码？</text>
   </view>
 </view>

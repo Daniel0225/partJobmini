@@ -6,6 +6,10 @@
   align-items: flex-start;
 }
 
+.topImage{
+  width: 100%;
+}
+
 .appSlogan{
   position: absolute;
   left: 80rpx;
@@ -28,14 +32,80 @@
 }
 .userLogin{
   color: #F1924A;
+  font-size: 40rpx;
+}
+.companyLogin{
+  font-size: 40rpx;
+   color:#666666;
 }
 .emptyView{
   width: 30px;
 }
 .mobileInputContain{
-  background-color: greenyellow;
+  align-self: center;
+  margin-top: 110rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
 }
 .phonePic{
   width: 30rpx;
+  height: 30rpx;
+}
+.mobileInput{
+  margin-left: 30rpx;
   height: 40rpx;
+  width: 100%;
+  font-size: 30rpx;
+  
+}
+.mobileLine{
+  margin-top: 20rpx;
+  background-color: gainsboro;
+  height: 3rpx;
+  align-self: center;
+  width: 75%;
+}
+.pwdInputContain{
+  align-self: center;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+.pwdInput{
+  margin-left: 30rpx;
+  height: 40rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+.loginBtn{
+  width: 75%;
+  align-self: center;
+  background-color: #F1924A;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 50rpx;
+  color: #FFFFFF;
+  font-size: 35rpx;
+}
+.registContain{
+  width: 75%;
+  margin-top: 20rpx;
+  align-self: center;
+}
+.registNow{
+  font-size: 30rpx;
+  color: gray;
+  align-self: flex-end;
+}
+.forgetPwd{
+  font-size: 30rpx;
+  color: gray;
+  float: right;
 }

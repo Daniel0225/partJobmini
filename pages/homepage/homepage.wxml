@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="positionContain">
+    <image class="ic_location" src="../../images/icon_location_m.png"></image>
+    <text class="poi">{{poiName}}</text>
+  </view>
+</view>
