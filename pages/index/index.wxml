@@ -16,7 +16,7 @@
   </view>
   
   <view class="mobileInputContain">
-<<<<<<< HEAD
+
     <image class="phonePic" src="../../images/icon_login_phone.png" mode="aspectFill"></image>
     <input class="mobileInput" bindinput="accountInput" type="number" placeholder="请输入手机号" value="{{account}}"></input>
   </view>
@@ -33,19 +33,5 @@
   <view class="registContain">
     <text class="registNow">立即注册</text>
     <text class="forgetPwd">忘记密码？</text>
-=======
-    <view class="mobleLabel">
-      <input type="text"></input>
-    </view>
-    <view class="passwordLabel">
-      <input type="password"></input>
-    </view>
-  </view>
-
-  <view class="loginBotton">登 录</view>
-  <view class="buttomLable">
-    <view class="signUpButton">立即注册</view>
-    <view class="forgetPasswordButton">忘记密码？</view>
->>>>>>> partJob
   </view>
 </view>
