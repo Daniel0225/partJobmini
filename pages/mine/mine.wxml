@@ -1,2 +1,42 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!--mine.wxml-->
+<view class="page">
+  <view class="userInfo">
+    <view class="headImg">
+      <image src="../../images/bkg_login.png"></image>
+    </view>
+    <view class="userContent">
+      <text class="userName">赵子龙</text>
+      <text class="userToSet">修改资料</text>
+    </view>
+  </view>
+  <view class="orderInfo">
+    <view class="orderInfoLeft">
+      <text class="num">1</text>
+      <text class="label">履约数</text>
+    </view>
+    <view class="orderInfoCenter">
+      <text class="num">1</text>
+      <text class="label">违约数</text>
+    </view>
+    <view class="orderInfoRight">
+      <text class="num">1</text>
+      <text class="label">取消数</text>
+    </view>
+  </view>
+  <view class="settingLabel">
+    <view class="setLabel">
+      <image src="../../images/icon_menu_my.png"></image>
+      <view class="goPage">
+        <view>实名认证</view>
+        <view class="toIco">已认证  ></view>
+      </view>
+    </view>
+    <view class="setLabel">
+      <image src="../../images/icon_menu_my.png"></image>
+      <view class="goPage">
+        <view>系统设置</view>
+        <view class="toIco">></view>
+      </view>
+    </view>
+  </view>
+</view>
