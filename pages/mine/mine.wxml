@@ -2,7 +2,7 @@
 <view class="page">
   <view class="userInfo">
     <view class="headImg">
-      <image src="../../images/bkg_login.png"></image>
+      <image src="../../images/default_header.png"></image>
     </view>
     <view class="userContent">
       <text class="userName">赵子龙</text>
@@ -25,17 +25,17 @@
   </view>
   <view class="settingLabel">
     <view class="setLabel">
-      <image src="../../images/icon_menu_my.png"></image>
+      <image src="../../images/icon_my_authentication.png"></image>
       <view class="goPage">
         <view>实名认证</view>
-        <view class="toIco">已认证  ></view>
+        <view class="toIco">已认证 <image src="../../images/icon_arrow_list.png"></image></view>
       </view>
     </view>
     <view class="setLabel">
-      <image src="../../images/icon_menu_my.png"></image>
+      <image src="../../images/icon_my_setting.png"></image>
       <view class="goPage">
         <view>系统设置</view>
-        <view class="toIco">></view>
+        <view class="toIco"><image src="../../images/icon_arrow_list.png"></image></view>
       </view>
     </view>
   </view>
