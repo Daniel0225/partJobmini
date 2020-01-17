@@ -1,1 +1,98 @@
-/* pages/mine/mine.wxss */
+page{
+  background-color: #eee;
+}
+.page {
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+}
+.page>view{
+  border-radius: 8rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+
+.userInfo{
+  height: 190rpx;
+  position: relative;
+}
+.userInfo>.headImg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 45rpx;
+  top: 35rpx;
+}
+.userInfo>.headImg>image{
+  width: 100%;
+  height: 100%;
+}
+.userContent{
+  padding-top: 60rpx;
+  margin-left: 190rpx;
+}
+.userContent>.userName{
+  font-size: 35rpx;
+  display: block;
+}
+.userContent>.userToSet{
+  font-size: 28rpx;
+  color: #999;
+}
+
+.orderInfo{
+  height: 150rpx;
+  clear: both;
+}
+.orderInfo>view{
+  width: 33.3%;
+  float: left;
+  text-align: center;
+}
+.orderInfo .num{
+  display: block;
+  padding-top: 30rpx;
+  padding-bottom: 5rpx;
+}
+.orderInfo .label{
+  font-size: 25rpx;
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.settingLabel{
+  height: 190rpx;
+  padding-top: 40rpx;
+}
+.settingLabel>view{
+  position: relative;
+  height: 80rpx;
+}
+.settingLabel>view>image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+}
+.settingLabel>view>view{
+  margin-left: 90rpx;
+  margin-right: 30rpx;
+}
+.settingLabel>view>view>view{
+  line-height: 60rpx;
+}
+.goPage>view{
+  width: 50%;
+  float: left;
+}
+.toIco{
+  text-align: right;
+  float: right;
+  font-size: 25rpx;
+  color: #666;
+}
