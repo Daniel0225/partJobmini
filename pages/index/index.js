@@ -100,6 +100,7 @@ Page({
         if (res.data.errNo == 200) {
           wx.hideLoading()
           app.globalData.userId = res.data.data.userId
+          app.globalData.token = res.data.data.uToken
           wx.setStorage({
             key: 'account',
             data: that.data.account,

@@ -3,4 +3,15 @@
     <image class="ic_location" src="../../images/icon_location_m.png"></image>
     <text class="poi">{{poiName}}</text>
   </view>
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">附近</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">收藏</view>
+  </view>
+
+  <view class="orderList">
+    <block wx:key="key"  wx:for="{{items}}">
+      <text>哦勒勒</text>
+    </block>
+  </view>
 </view>

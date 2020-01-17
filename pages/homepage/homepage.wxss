@@ -20,3 +20,27 @@
   margin-left: 20rpx;
   color: #666666
 }
+.swiper-tab{
+    width: 100%;
+    margin-top: 30rpx;
+    text-align: center;
+    line-height: 80rpx;}
+.swiper-tab-list{  font-size: 30rpx;
+    display: inline-block;
+    width: 50%;
+    color: #777777;
+}
+.on{ color: #F1924A;
+    border-bottom: 6rpx solid #F1924A;}
+
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
+.swiper-box view{
+    text-align: center;
+}
+
+.orderList{
+  
+  width: 100%;
+  
+
+}

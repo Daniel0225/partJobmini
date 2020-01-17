@@ -109,12 +109,6 @@
   color: gray;
   float: right;
 }
-.mobileInputContain{
-  border-bottom: 1px solid #ddd;
-}
-.pwdInputContain{
-  border-bottom: 1px solid #ddd;
-}
 
 .passwordLabel{
   background-repeat: no-repeat;
