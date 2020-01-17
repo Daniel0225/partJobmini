@@ -20,13 +20,13 @@
     <image class="phonePic" src="../../images/icon_login_phone.png" mode="aspectFill"></image>
     <input class="mobileInput" bindinput="accountInput" type="number" placeholder="请输入手机号" value="{{account}}"></input>
   </view>
-  <text class="mobileLine"></text>
+  <!-- <text class="mobileLine"></text> -->
 
   <view class="pwdInputContain">
     <image class="phonePic" src="../../images/icon_login_password.png" mode="aspectFill"></image>
     <input class="pwdInput" bindinput="passwordInput" placeholder="请输入密码" password="true" value='{{password}}'></input>
   </view>
-  <text class="mobileLine"></text>
+  <!-- <text class="mobileLine"></text> -->
 
   <button class="loginBtn" bindtap="getToken">登录</button>
 
