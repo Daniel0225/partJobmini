@@ -1,1 +1,8 @@
 /* pages/calendar/calendar.wxss */
+page{
+  background-color: #eee;
+}
+.calendar {
+  height: 560rpx;
+  background-color: #fff;
+}

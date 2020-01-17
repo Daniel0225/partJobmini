@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    selectedDate: `${(new Date()).getFullYear()}-${(new Date()).getMonth() < 9 ? '0' : ''}${(new Date()).getMonth() + 1}-${(new Date()).getDate()}`
   },
 
   /**
@@ -62,5 +62,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onDayClick: function (event) {
+    console.log(event.detail)
+    wx.showToast({
+      title: '日期被点击，具体信息请看Console信息',
+      icon: 'none'
+    })
+  },
+  onMonthChange: function (event) {
+    console.log(event.detail)
+  },
+  formatDate: function (time) {
+    var d = new Date(time);
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var day = d.getDate();
+    return year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
   }
 })

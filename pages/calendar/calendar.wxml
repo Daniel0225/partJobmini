@@ -1,2 +1,8 @@
 <!--pages/calendar/calendar.wxml-->
-<text>pages/calendar/calendar.wxml</text>
+<view class="page">
+  <view class="calendar">
+    <!--https://github.com/AFAP/XCX-Plugins-->
+    <calendar  selected-date='{{selectedDate}}' bindOnDayClick="onDayClick" bindOnMonthChange="onMonthChange" show-more-days="{{false}}"  />
+  </view>
+</view>
+<text>{{selectedDate}}</text>
