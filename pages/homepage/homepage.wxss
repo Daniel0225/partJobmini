@@ -37,10 +37,36 @@
 .swiper-box view{
     text-align: center;
 }
-
 .orderList{
-  
   width: 100%;
-  
+  background: #F3F3F3;
+}
+.item{
+  background: #ffffff;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+.topView{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+  align-items: center
+}
 
+.collectImage{
+  position: absolute;
+  width: 46rpx;
+  height: 44rpx;
+  right: 0rpx;
+}
+.countView{
+  position: absolute;
+  right: 60rpx;
+  font-size: 25rpx;
+  color: #F1924A
+}
+.titleView{
+  margin-left: 20rpx;
+  font-size: 30rpx;
 }

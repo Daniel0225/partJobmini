@@ -11,7 +11,14 @@
 
   <view class="orderList">
     <block wx:key="key"  wx:for="{{items}}">
-      <text>哦勒勒</text>
+      <view class="item" bindtap="toDetail" data-item="{{item}}" data-id="{{item.id}}">
+        <view class="topView">
+          <text class="titleView">{{item.title}}</text>
+          <text class="countView">{{item.count}}人已报名</text>
+          <image class="collectImage" src="../../images/icon_collect.png"></image>
+        </view>
+        <text >{{item.price}}</text>
+      </view>
     </block>
   </view>
 </view>
