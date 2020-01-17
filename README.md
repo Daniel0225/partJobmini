@@ -4,6 +4,6 @@
 | pages下目录 |  名称    | 开发状态 | 开发员   |
 | ------------| -------- | -------- | -------- |
 | index       | 登录     | 已完成   | ding     |
-| homepage    | 首页     |          |          |
-| calendar    | 日历页面 |          |          |
+| homepage    | 首页     |         |          |
+| calendar    | 日历页面 | 开发中   |xiao      |
 | mine        | 我的     | 开发中   | xiao     |
