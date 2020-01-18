@@ -12,7 +12,8 @@ Page({
     currentTab: 0,
     poiName:'定位中...',
     location:"",
-    items:[]
+    items:[],
+    isEmpty:false//是否显示空提示
   },
 
   /**
@@ -110,17 +111,15 @@ Page({
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
     } else {
+      if (this.data.currentTab == 0){
+        this.getCollectWork()
+      }else{
+        this.getWorks()
+      }
       that.setData({
         currentTab: e.target.dataset.current
       })
     }
-  },
-
-  bindChange: function (e) {
-
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
-
   },
   /**
    * 获取附近的任务列表
@@ -142,10 +141,82 @@ Page({
       success: function (res) {
         console.log(res)
         wx.hideLoading()
-        that.setData({
-          items:res.data.data.list
-        })
+        if(res.data.errNo == 200){
+          that.setData({
+            items: res.data.data.list,
+            isEmpty:res.data.data.list.length == 0
+          })
+        }else{
+
+        }
       }
+    })
+  },
+
+  /**
+   * 获取收藏列表
+   */
+  getCollectWork:function(e){
+    var that = this;
+    var location = this.data.location.split(",")
+    wx.showLoading({
+      title: '正在请求',
+    })
+    wx.request({
+      url: app.config.host + 'user/workCollectList',
+      method: 'POST',
+      data: {
+        uToken: app.globalData.token,
+      },
+      success: function (res) {
+        console.log(res)
+        wx.hideLoading()
+        if (res.data.errNo == 200) {
+          that.setData({
+            items: res.data.data.list,
+            isEmpty: res.data.data.list.length == 0
+          })
+        } else {
+
+        }
+      }
+    })
+  },
+
+  /**
+   * 收藏按钮点击
+   */
+  clickCollect:function(e){
+    console.log(e.currentTarget.dataset.position)
+    let temp = 'items[' + e.currentTarget.dataset.position + '].isCollect'
+    let isCollect = this.data.items[e.currentTarget.dataset.position].isCollect
+    this.setData({
+      [temp]: isCollect == 0 ? 1 : 0
+    })
+    this.isCollect(this.data.items[e.currentTarget.dataset.position])
+  },
+  /**
+   * 收藏和 取消收藏
+   */
+  isCollect:function(e){
+    var that = this
+    wx.request({
+      url: app.config.host + 'user/workCollect',
+      method: 'POST',
+      data:{
+        uToken:app.globalData.token,
+        workId:e.id,
+        status:e.isCollect == 0 ? 1 : 0
+      },
+      success:function(res){
+        console.log(res)
+      },
+    })
+  },
+  toDetail:function(e){
+    console.log(e)
+    wx.navigateTo({
+      url: '../../pages/workinfo/workinfo',
     })
   }
 })

@@ -42,6 +42,8 @@
   background: #F3F3F3;
 }
 .item{
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   margin: 20rpx;
   padding: 20rpx;
@@ -67,6 +69,37 @@
   color: #F1924A
 }
 .titleView{
-  margin-left: 20rpx;
+  margin-left: 10rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.priceView{
   font-size: 30rpx;
+  margin-left: 10rpx;
+  color: #F1924A;
+  margin-top: 10rpx;
+}
+.dateView{
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.poiContain{
+  border: 0 2rpx 0 0 #666666;
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+}
+.poiImage{
+  width: 28rpx;
+  height: 28rpx;
+}
+.poiName{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.emptyView{
+  width: 336rpx;
+  height: 308rpx;
+  align-self: center;
+  margin-top: 200rpx;
 }
