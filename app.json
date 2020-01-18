@@ -6,7 +6,8 @@
     "pages/mine/mine",
     "pages/logs/logs",
     "pages/workinfo/workinfo",
-    "pages/mine/setting/info"
+    "pages/mine/setting/info",
+    "pages/map/map"
   ],
   "permission": {
     "scope.userLocation": {

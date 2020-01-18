@@ -22,7 +22,7 @@
     <text class="contentLabel">{{workBean.poiName}}</text>
     <text class="locationInfo">联系方式：报名可查看</text>
     <text class="locationInfo">工作时间：{{workBean.workDate}} {{workBean.startTime}} - {{workBean.endTime}}</text>
-    <view class="locationView">
+    <view class="locationView" bindtap="toMap">
       <text class="locationViewText">工作地点：{{workBean.address}}</text>
       <image class="positionImage" src="../../images/icon_location_l.png"></image>
     </view>
@@ -38,8 +38,8 @@
     <text class="warmText">2.报名上岗后由服务单位进行费用结算</text>
   </view>
   <view class="controlView">
-    <text class="signIn">签到</text>
-    <text class="signIn">签退</text>
-    <text class="signUp">立即报名</text>
+    <text class="signIn" bindtap="signInClick">签到</text>
+    <text class="signIn" bindtap="signBackClick">签退</text>
+    <text class="signUp" bindtap="signUpClick">{{signStatus}}</text>
   </view>
 </view>
