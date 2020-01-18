@@ -1,8 +1,25 @@
 <!--pages/calendar/calendar.wxml-->
 <view class="page">
   <view class="calendar">
-    <!--https://github.com/AFAP/XCX-Plugins-->
-    <calendar  selected-date='{{selectedDate}}' bindOnDayClick="onDayClick" bindOnMonthChange="onMonthChange" show-more-days="{{false}}"  />
+    <!--https://github.com/AFAP/XCX-Plugins  project.config.json 的参数 libVersion": 2.8.0 及以上 -->
+    <calendar selected-date='{{selectedDate}}' bindOnDayClick="onDayClick" bindOnMonthChange="onMonthChange" show-more-days="{{false}}"  />
+  </view>
+  <view class="workList">
+    <navigator class="workLi" hover-class="workLiActive" role="navigation">
+      <view class="workLiCompanyName">
+        <text class="workLiIcon">聘</text>
+        <text class="workLiCompanyNameText">华东交大</text>
+      </view>
+      <view class="workLiAddress">
+        <text class="workLiAddressText">华东交大华东交大华东交大华东交大华东交大东交大华东交大华东交大</text>
+        <image src="../../images/icon_location_m.png"></image>
+      </view>
+      <view class="workLiDatetime">
+        <text class="workDate">2020-01-01 </text>
+        <text class="workStart">22:44:00</text>
+        <text class="workTo">-</text>
+        <text class="workEnd">23:44:00</text>
+      </view>
+    </navigator>
   </view>
 </view>
-<text>{{selectedDate}}</text>

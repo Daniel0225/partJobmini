@@ -23,7 +23,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.8.0",
 	"appid": "wxc9d0b1865212944f",
 	"projectname": "partJobmini",
 	"debugOptions": {

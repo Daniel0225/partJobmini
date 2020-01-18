@@ -6,3 +6,45 @@ page{
   height: 560rpx;
   background-color: #fff;
 }
+
+.workList{
+  margin-top: 20rpx;
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+.workLiActive{
+  background-color: rgb(243, 243, 243);
+}
+.workList>.workLi{
+  border-radius: 8rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.workLiCompanyName{
+  font-size: 40rpx;
+}
+.workLiCompanyName>.workLiIcon{
+  display: inline-block;
+  width: 70rpx;
+  height: 70rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 70rpx;
+  background-color: #F1924A;
+  margin-right: 20rpx;
+}
+.workLiAddress, .workLiDatetime{
+  margin-left: 90rpx;
+}
+.workLiAddress>image{
+  width: 33rpx;
+  height: 45rpx;
+}
+.workLiAddressText{
+  width: 80%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

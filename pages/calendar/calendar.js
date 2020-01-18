@@ -4,15 +4,15 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    selectedDate: `${(new Date()).getFullYear()}-${(new Date()).getMonth() < 9 ? '0' : ''}${(new Date()).getMonth() + 1}-${(new Date()).getDate()}`
-  },
+  data: {},
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const cuDate = new Date();
+    const selectedDate = `${cuDate.getFullYear()}-${cuDate.getMonth() < 9 ? '0' : ''}${cuDate.getMonth() + 1}-${cuDate.getDate()}`;
+    this.setData({selectedDate});
   },
 
   /**
@@ -71,7 +71,8 @@ Page({
     })
   },
   onMonthChange: function (event) {
-    console.log(event.detail)
+    const selectedDate = this.formatDate(event.detail);
+    this.setData({selectedDate})
   },
   formatDate: function (time) {
     var d = new Date(time);
