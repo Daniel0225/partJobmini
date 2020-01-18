@@ -77,6 +77,9 @@ Page({
             title: res.data.errMsg,
           })
         }
+      },
+      fail:function(e){
+        
       }
     })
   },

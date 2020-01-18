@@ -15,10 +15,18 @@
         <view class="topView">
           <text class="titleView">{{item.title}}</text>
           <text class="countView">{{item.count}}人已报名</text>
-          <image class="collectImage" src="../../images/icon_collect.png"></image>
+          <image wx:if="{{item.isCollect == 0}}" bindtap="clickCollect" data-position="{{index}}" class="collectImage" src="../../images/icon_collect.png"></image>
+          <image wx:else bindtap="clickCollect" data-position="{{index}}" class="collectImage" src="../../images/icon_collect_select.png"></image>
         </view>
-        <text >{{item.price}}</text>
+        <text class="priceView" >{{item.price/100}}{{item.unit == 1 ? "元 /小时" : "元 /天"}}</text>
+        <text class="dateView" >{{item.startTime}}</text>
+        <text class="dateView" >{{item.address}}</text>
+        <view class="poiContain">
+          <image class="poiImage" src="../../images/icon_list_compang.png"></image>
+          <text class="poiName">{{item.poiName}}</text>
+        </view>
       </view>
     </block>
   </view>
+  <image class="emptyView" wx:if="{{isEmpty}}" src="../../images/empty.png"></image>
 </view>

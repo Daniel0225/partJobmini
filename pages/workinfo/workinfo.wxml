@@ -1,0 +1,45 @@
+<!--pages/workinfo/workinfo.wxml-->
+<view class="rootView">
+
+  <view class="topInfo">
+    <view class="titleContain">
+      <text class="titleView">{{workBean.title}}</text>
+      <text class="priceView">{{workBean.price/100}}{{workBean.unit == 1 ? "元 /小时" : "元 /天"}}</text>
+    </view>
+    <text class="countView">招聘{{workBean.total}}人，已报名{{workBean.account}}人</text>
+  </view>
+  <view class="dividerView"></view>
+
+  <view class="contentContain">
+    <text class="contentLabel">工作内容：</text>
+    <text class="content">{{workBean.workContent}}</text>
+    <text class="remarkView">备注：{{workBean.remark}}</text>
+
+    <view class="dividerLine"></view>
+  </view>
+
+  <view class="contentContain">
+    <text class="contentLabel">{{workBean.poiName}}</text>
+    <text class="locationInfo">联系方式：报名可查看</text>
+    <text class="locationInfo">工作时间：{{workBean.workDate}} {{workBean.startTime}} - {{workBean.endTime}}</text>
+    <view class="locationView">
+      <text class="locationViewText">工作地点：{{workBean.address}}</text>
+      <image class="positionImage" src="../../images/icon_location_l.png"></image>
+    </view>
+    <view class="dividerLine"></view>
+  </view>
+  
+  <view class="contentContain">
+    <view class="locationView">
+      <image class="warmImage" src="../../images/icon_caution.png"></image>
+      <text class="warmTitle">平台声明</text>
+    </view>
+    <text class="warmText">1.本平台作为第三方服务平台，不会以任何名义收取会员任何费用！</text>
+    <text class="warmText">2.报名上岗后由服务单位进行费用结算</text>
+  </view>
+  <view class="controlView">
+    <text class="signIn">签到</text>
+    <text class="signIn">签退</text>
+    <text class="signUp">立即报名</text>
+  </view>
+</view>
