@@ -26,13 +26,13 @@
     "list": [
       {
         "selectedIconPath": "images/icon_menu_home_select.png",
-        "iconPath": "images/icon_menu_calendar.png",
+        "iconPath": "images/icon_menu_home.png",
         "pagePath": "pages/homepage/homepage",
         "text": "首页"
       },
       {
         "selectedIconPath": "images/icon_menu_calendar_select.png",
-        "iconPath": "images/icon_menu_home.png",
+        "iconPath": "images/icon_menu_calendar.png",
         "pagePath": "pages/calendar/calendar",
         "text": "日历"
       },
