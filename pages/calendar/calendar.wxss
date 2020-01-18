@@ -40,9 +40,10 @@ page{
 .workLiAddress>image{
   width: 33rpx;
   height: 45rpx;
+  margin-left: 10rpx;
 }
 .workLiAddressText{
-  width: 80%;
+  max-width: 80%;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;

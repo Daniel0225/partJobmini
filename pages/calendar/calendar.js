@@ -1,10 +1,14 @@
 // pages/calendar/calendar.js
+const app = getApp()
+const baseApi = 'user/myWorks';
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    items: []
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -12,7 +16,8 @@ Page({
   onLoad: function (options) {
     const cuDate = new Date();
     const selectedDate = `${cuDate.getFullYear()}-${cuDate.getMonth() < 9 ? '0' : ''}${cuDate.getMonth() + 1}-${cuDate.getDate()}`;
-    this.setData({selectedDate});
+    this.setData({selectedDate})
+    this.requestApi(selectedDate)
   },
 
   /**
@@ -64,15 +69,12 @@ Page({
 
   },
   onDayClick: function (event) {
-    console.log(event.detail)
-    wx.showToast({
-      title: '日期被点击，具体信息请看Console信息',
-      icon: 'none'
-    })
+    this.requestApi(event.detail.id)
   },
   onMonthChange: function (event) {
     const selectedDate = this.formatDate(event.detail);
-    this.setData({selectedDate})
+    this.setData({ selectedDate })
+    this.requestApi(selectedDate);
   },
   formatDate: function (time) {
     var d = new Date(time);
@@ -80,5 +82,36 @@ Page({
     var month = d.getMonth() + 1;
     var day = d.getDate();
     return year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+  },
+  showWork: function(data) {
+    this.setData({
+      items: data.data.list
+    });
+  },
+  requestApi: function(date) {
+    this.curl(baseApi, {
+      uToken: app.globalData.token,
+      startDate: date,
+      endDate: date
+    }, this.showWork);
+  },
+  curl: function (api, data, successFn, method = 'POST') {
+    wx.showLoading({
+      title: '正在请求',
+    })
+    wx.request({
+      url: `${app.config.host}${api}`,
+      method,
+      data,
+      success: function (res) {
+        console.log(res)
+        wx.hideLoading()
+        if (res.data.errNo === 200) {
+          successFn(res.data);
+        } else {
+          console.error(res)
+        }
+      }
+    })
   }
 })

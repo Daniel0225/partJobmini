@@ -5,21 +5,23 @@
     <calendar selected-date='{{selectedDate}}' bindOnDayClick="onDayClick" bindOnMonthChange="onMonthChange" show-more-days="{{false}}"  />
   </view>
   <view class="workList">
-    <navigator class="workLi" hover-class="workLiActive" role="navigation">
+  <block wx:for="{{items}}">
+    <navigator wx:key="{{item.id}}" url="/pages/workinfo/workinfo?workId={{item.id}}" class="workLi" hover-class="workLiActive" role="navigation">
       <view class="workLiCompanyName">
         <text class="workLiIcon">聘</text>
-        <text class="workLiCompanyNameText">华东交大</text>
+        <text class="workLiCompanyNameText">{{item.title}}</text>
       </view>
       <view class="workLiAddress">
-        <text class="workLiAddressText">华东交大华东交大华东交大华东交大华东交大东交大华东交大华东交大</text>
+        <text class="workLiAddressText">{{item.poiName}}</text>
         <image src="../../images/icon_location_m.png"></image>
       </view>
       <view class="workLiDatetime">
-        <text class="workDate">2020-01-01 </text>
-        <text class="workStart">22:44:00</text>
+        <text class="workDate">{{item.workDate}} </text>
+        <text class="workStart">{{item.sratTime}}</text>
         <text class="workTo">-</text>
-        <text class="workEnd">23:44:00</text>
+        <text class="workEnd">{{item.endTime}}</text>
       </view>
     </navigator>
+  </block>
   </view>
 </view>
