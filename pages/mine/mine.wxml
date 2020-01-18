@@ -6,7 +6,7 @@
     </view>
     <view class="userContent">
       <text class="userName">赵子龙</text>
-      <text class="userToSet">修改资料</text>
+      <navigator class="userToSet" url="setting/info">修改资料</navigator>
     </view>
   </view>
   <view class="orderInfo">

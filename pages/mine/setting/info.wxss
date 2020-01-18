@@ -1,0 +1,36 @@
+/* pages/mine/setting/info.wxss */
+page{
+  background-color: #eee;
+}
+
+.headImgLabel{
+  background-color: #fff;
+  clear: both;
+  height: 120rpx;
+  padding: 20rpx;
+}
+.headImgLabel>text{
+  line-height: 120rpx;
+}
+.headImgSet{
+  width: 180rpx;
+  float: right;
+}
+.headImg{
+  width: 180rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  overflow: hidden;
+}
+.headImg>image{
+  width: 120rpx;
+  height: 100%;
+  display: inline-block;
+}
+mp-icon {
+  display: inline-block;
+  vertical-align: top;
+    margin-top: 30rpx;
+    margin-left: 5px;
+
+}

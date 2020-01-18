@@ -5,7 +5,8 @@
     "pages/calendar/calendar",
     "pages/mine/mine",
     "pages/logs/logs",
-    "pages/workinfo/workinfo"
+    "pages/workinfo/workinfo",
+    "pages/mine/setting/info"
   ],
   "permission": {
     "scope.userLocation": {

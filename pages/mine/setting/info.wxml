@@ -1,0 +1,12 @@
+<!--pages/mine/setting/info.wxml-->
+<view class="page">
+  <view class="headImgLabel">
+    <text>头像</text>
+    <view class="headImgSet">
+      <view class="headImg">
+        <image src="../../../images/default_header.png"></image>
+        <mp-icon icon="arrow" color="#ddd" size="15"></mp-icon>
+      </view>
+    </view>
+  </view>
+</view>
