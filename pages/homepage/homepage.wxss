@@ -96,6 +96,7 @@
 .poiName{
   font-size: 30rpx;
   margin-left: 20rpx;
+  border-bottom-color: #999999
 }
 .emptyView{
   width: 336rpx;

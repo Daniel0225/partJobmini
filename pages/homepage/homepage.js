@@ -216,7 +216,7 @@ Page({
   toDetail:function(e){
     console.log(e)
     wx.navigateTo({
-      url: '../../pages/workinfo/workinfo',
+      url: '../../pages/workinfo/workinfo?workId='+e.currentTarget.dataset.id,
     })
   }
 })
