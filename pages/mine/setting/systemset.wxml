@@ -1,0 +1,12 @@
+<!--pages/mine/setting/systemset.wxml-->
+<view class="page">
+  <view class="settingLabel">
+    <view class="mobileLabel">
+      <image src="../../../images/icon_my_setting.png"></image>
+      <view class="goPage" bindtap="goPageChangeMobile">
+        <view>修改绑定手机</view>
+        <view class="toIco"><image src="../../../images/icon_arrow_list.png"></image></view>
+      </view>
+    </view>
+  </view>
+</view>

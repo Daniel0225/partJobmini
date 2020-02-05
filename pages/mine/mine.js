@@ -1,18 +1,20 @@
 // pages/mine/mine.js
+const app = getApp()
+const baseApi = 'user/userInfo'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.requestApi();
   },
 
   /**
@@ -62,5 +64,41 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goRealAuth: function() {
+    if (this.data.userInfo.isRealAuth !== 1) {
+      wx.reLaunch({
+        url: 'setting/realuth',
+      })
+    }
+  },
+  setUserInfo: function (data) {
+    this.setData({
+      userInfo: data.data
+    });
+  },
+  requestApi: function () {
+    this.curl(baseApi, {
+      uToken: app.globalData.token,
+    }, this.setUserInfo);
+  },
+  curl: function (api, data, successFn, method = 'POST') {
+    wx.showLoading({
+      title: '正在请求',
+    })
+    wx.request({
+      url: `${app.config.host}${api}`,
+      method,
+      data,
+      success: function (res) {
+        console.log(res)
+        wx.hideLoading()
+        if (res.data.errNo === 200) {
+          successFn(res.data);
+        } else {
+          console.error(res)
+        }
+      }
+    })
   }
 })

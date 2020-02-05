@@ -1,0 +1,37 @@
+/* pages/mine/setting/realuth.wxss */
+.page{
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+}
+.titleLabel{
+  font-size: 45rpx;
+  padding-bottom: 20rpx;
+}
+.tipLabel{
+  color: #999;
+  font-size: 28rpx;
+}
+.nameLabel text, .idcardLabel text{
+  width: 180rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.nameLabel, .idcardLabel{
+  border-bottom: 1px solid #999;
+  padding-top: 50rpx;
+  padding-bottom: 40rpx;
+}
+.nameLabel{
+  padding-top: 55rpx;
+}
+input{
+  display: inline-block;
+  
+}
+.subButton{
+  background-color: #F1924A;
+  color: #FFFF;
+  margin-top: 60rpx;
+}

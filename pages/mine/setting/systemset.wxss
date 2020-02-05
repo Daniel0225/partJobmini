@@ -1,0 +1,40 @@
+.settingLabel{
+  padding-top: 40rpx;
+  border-bottom: 1px solid #BBB;
+}
+.settingLabel>view{
+  position: relative;
+  height: 90rpx;
+}
+.settingLabel>view>image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  vertical-align: middle;
+  margin-top: 6rpx;
+}
+.settingLabel>view>view{
+  margin-left: 90rpx;
+  margin-right: 30rpx;
+}
+.settingLabel>view>view>view{
+  line-height: 60rpx;
+}
+.goPage>view{
+  width: 50%;
+  float: left;
+}
+.toIco{
+  text-align: right;
+  float: right;
+  font-size: 25rpx;
+  color: #666;
+}
+.toIco>image{
+  display: inline-block;
+  width: 20rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}

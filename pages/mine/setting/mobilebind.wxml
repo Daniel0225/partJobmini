@@ -1,0 +1,13 @@
+<!--pages/mine/setting/mobilebind.wxml-->
+<view class="page">
+  <view class="titleLabel">{{titleText}}</view>
+  <view class="mobileLabel">
+    <input bindinput="mobileInput" placeholder="请输入手机号" type="number"></input>
+    <button class="sendcodebtn" bindtap="sendCode">{{sendCodeText}}</button>
+  </view>
+  <view class="codeLabel">
+    <input bindinput="codeInput" placeholder="请输入验证码" type="number"></input>
+  </view>
+  <button class="subButton">{{btnText}}</button>
+</view>
+

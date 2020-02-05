@@ -1,0 +1,45 @@
+/* pages/mine/setting/realuth.wxss */
+.page{
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+}
+.titleLabel{
+  font-size: 45rpx;
+  padding-bottom: 20rpx;
+}
+.tipLabel{
+  color: #999;
+  font-size: 28rpx;
+}
+.mobileLabel, .codeLabel{
+  border-bottom: 1px solid #999;
+  padding-top: 50rpx;
+  padding-bottom: 40rpx;
+}
+.mobileLabel{
+  padding-top: 55rpx;
+  position: relative;
+  padding-right: 200rpx;
+}
+.sendcodebtn{
+  border: 1px solid #bbb;
+  padding: 10rpx;
+  color: #F1924A;
+  width: 200rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background-color: #FFF;
+  line-height: 36rpx;
+  font-size: 30rpx;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 30rpx;
+}
+.subButton{
+  background-color: #F1924A;
+  color: #FFFF;
+  margin-top: 60rpx;
+}

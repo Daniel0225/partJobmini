@@ -6,6 +6,7 @@
   </image>
   
   <text class="appSlogan">你好，</text>
+  <button open-type="getUserInfo"/>
   
   <text class="appSlogan2">欢迎来到方圆</text>
 

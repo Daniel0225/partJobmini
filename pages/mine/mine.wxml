@@ -5,21 +5,21 @@
       <image src="../../images/default_header.png"></image>
     </view>
     <view class="userContent">
-      <text class="userName">赵子龙</text>
-      <navigator class="userToSet" url="setting/info">修改资料</navigator>
+      <text class="userName">{{userInfo.name}}</text>
+      <!--navigator class="userToSet" url="setting/info">修改资料</navigator-->
     </view>
   </view>
   <view class="orderInfo">
     <view class="orderInfoLeft">
-      <text class="num">1</text>
+      <text class="num">{{userInfo.promiseCount}}</text>
       <text class="label">履约数</text>
     </view>
     <view class="orderInfoCenter">
-      <text class="num">1</text>
+      <text class="num">{{userInfo.defaultCount}}</text>
       <text class="label">违约数</text>
     </view>
     <view class="orderInfoRight">
-      <text class="num">1</text>
+      <text class="num">{{userInfo.cancelCount}}</text>
       <text class="label">取消数</text>
     </view>
   </view>
@@ -28,7 +28,7 @@
       <image src="../../images/icon_my_authentication.png"></image>
       <view class="goPage">
         <view>实名认证</view>
-        <view class="toIco">已认证 <image src="../../images/icon_arrow_list.png"></image></view>
+        <view class="toIco" bindtap="goRealAuth">{{userInfo.isRealAuth === 1 ? '已认证' : '未认证'}} <image src="../../images/icon_arrow_list.png"></image></view>
       </view>
     </view>
     <view class="setLabel">
