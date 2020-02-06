@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/homepage/homepage",
     "pages/calendar/calendar",
     "pages/mine/mine",
@@ -10,6 +9,7 @@
     "pages/logs/logs",
     "pages/workinfo/workinfo",
     "pages/mine/setting/info",
+    "pages/index/index",
     "pages/map/map"
   ],
   "permission": {

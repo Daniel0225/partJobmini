@@ -72,6 +72,11 @@ Page({
       })
     }
   },
+  goSystemSet: function () {
+    wx.reLaunch({
+      url: 'setting/systemset',
+    })
+  },
   setUserInfo: function (data) {
     this.setData({
       userInfo: data.data

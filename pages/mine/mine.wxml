@@ -33,7 +33,7 @@
     </view>
     <view class="setLabel">
       <image src="../../images/icon_my_setting.png"></image>
-      <view class="goPage">
+      <view class="goPage" bindtap="goSystemSet">
         <view>系统设置</view>
         <view class="toIco"><image src="../../images/icon_arrow_list.png"></image></view>
       </view>

@@ -8,6 +8,6 @@
   <view class="codeLabel">
     <input bindinput="codeInput" placeholder="请输入验证码" type="number"></input>
   </view>
-  <button class="subButton">{{btnText}}</button>
+  <button class="subButton" bindtap="submitEvn">{{btnText}}</button>
 </view>
 
