@@ -18,13 +18,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({ type: options.type })
     if (options.type === '1') {// 系统设置-修改手机绑定
-      this.setData({ type: options.type })
       if (app.globalData.userId !== defaultUserId) {
         this.setData({ titleText: '修改手机绑定' })
       }
     } else if (options.type === '2') {
-
+      this.setData({ btnText: '下一步' })
     } else {
 
     }
@@ -55,13 +55,20 @@ Page({
       } else {
         api = 'miniprogram/bindMobile'
       }
+    } else if ($this.data.type === '2') {
+      api = 'miniprogram/bindMobile'
+      dumpPage = 'realuth'
     }
     $this.curl(api, params, function () {
       wx.showToast({
         title,
+        mask: true,
         complete: function() {
           if (api === 'miniprogram/bindMobile') {
             app.wxLogin(function() {
+              if (app.globalData.userId !== defaultUserId) {
+                dumpPage = '../mine'
+              }
               wx.reLaunch({
                 url: dumpPage,
               })
@@ -91,6 +98,7 @@ Page({
       wx.showToast({
         title: '请输入手机号',
         icon: 'none',
+        mask: true,
         duration: 1500
       })
       errNo ++
@@ -100,6 +108,7 @@ Page({
         wx.showToast({
           title: '请输入验证码',
           icon: 'none',
+          mask: true,
           duration: 1500
         })
         errNo ++

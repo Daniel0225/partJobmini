@@ -114,6 +114,7 @@ Page({
     }else{
       wx.showToast({
         title: '此状态无法签到',
+        mask: true,
       })
     }
   },
@@ -126,6 +127,7 @@ Page({
     } else {
       wx.showToast({
         title: '此状态无法签退',
+        mask: true,
       })
     }
   },
@@ -140,6 +142,7 @@ Page({
     } else {
       wx.showToast({
         title: '当前工单状态无法报名',
+        mask: true,
       })
     }
   },
@@ -166,6 +169,7 @@ Page({
           if(res.data.data.errNo == 0){
             wx.showToast({
               title: '已签到',
+              mask: true,
             })
             let temp = 'workBean.orderStatus'
             that.setData({
@@ -174,12 +178,14 @@ Page({
           }else{
             wx.showToast({
               title: res.data.data.errMsg,
+              mask: true,
             })
           }
           
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       }
@@ -207,6 +213,7 @@ Page({
           if (res.data.data.errNo == 0) {
             wx.showToast({
               title: '已签退',
+              mask: true,
             })
             let temp = 'workBean.orderStatus'
             that.setData({
@@ -215,12 +222,14 @@ Page({
           } else {
             wx.showToast({
               title: res.data.data.errMsg,
+              mask: true,
             })
           }
           
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       }
@@ -249,6 +258,7 @@ Page({
           if (res.data.data.errNo == 0) {
             wx.showToast({
               title: '已报名',
+              mask: true,
             })
             let temp = 'workBean.orderStatus'
             that.setData({
@@ -259,11 +269,13 @@ Page({
           } else {
             wx.showToast({
               title: res.data.data.errMsg,
+              mask: true,
             })
           }
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       }
@@ -292,6 +304,7 @@ Page({
           if (res.data.data.errNo == 0) {
             wx.showToast({
               title: '已取消报名',
+              mask: true,
             })
             let temp = 'workBean.orderStatus'
             that.setData({
@@ -301,11 +314,13 @@ Page({
           } else {
             wx.showToast({
               title: res.data.data.errMsg,
+              mask: true,
             })
           }
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       }

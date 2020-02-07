@@ -5,7 +5,6 @@ App({
     appid: 1002,
     secret: '2ad6a6927456476b6dcbfaf4e1eb42a3',
     host: 'http://106.13.38.140:7001/' // 这个地方填写你的域名
-    // host: 'http://127.0.0.1:7001/'
   },
   onLaunch: function () {
     const that = this
@@ -67,6 +66,7 @@ App({
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       },
@@ -96,6 +96,7 @@ App({
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       },

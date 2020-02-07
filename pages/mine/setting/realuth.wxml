@@ -10,5 +10,5 @@
     <text>身份证号码</text>
     <input bindinput="idcardNoInput" placeholder="请输入身份证号码" type="text"></input>
   </view>
-  <button class="subButton">提交认证</button>
+  <button class="subButton" bindtap="submitEve">提交认证</button>
 </view>

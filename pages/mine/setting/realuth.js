@@ -1,4 +1,5 @@
 // pages/mine/setting/realuth.js
+const app = getApp()
 Page({
 
   /**
@@ -65,10 +66,50 @@ Page({
   },
 
   nameInput: function (e) {
-    this.data.account = e.detail.value
+    this.data.name = e.detail.value
   },
 
   idcardNoInput: function (e) {
-    this.data.password = e.detail.value
+    this.data.cardNo = e.detail.value
+  },
+  submitEve: function() {
+    const {name, cardNo} = this.data
+    const params = { uToken: app.globalData.token, name, cardNo }
+    this.curl('realAuth', params, function() {
+      wx.showToast({
+        title: '认证成功',
+        icon: 'success',
+        mask: true,
+        complete: function() {
+          wx.reLaunch({
+            url: '../mine',
+          })
+        }
+      })
+    })
+  },
+  curl: function (api, data, successFn, method = 'POST') {
+    wx.showLoading({
+      title: '正在请求',
+    })
+    wx.request({
+      url: `${app.config.host}${api}`,
+      method,
+      data,
+      success: function (res) {
+        console.log(res)
+        wx.hideLoading()
+        if (res.data.errNo === 200) {
+          successFn(res.data);
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: res.data.errMsg,
+            showCancel: false
+          })
+          console.error(res)
+        }
+      }
+    })
   }
 })

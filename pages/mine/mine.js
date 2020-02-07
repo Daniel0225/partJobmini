@@ -67,8 +67,9 @@ Page({
   },
   goRealAuth: function() {
     if (this.data.userInfo.isRealAuth !== 1) {
+      const url = app.globalData.userId === '0000000000000000' ? 'setting/mobilebind?type=2' : 'setting/realuth'
       wx.reLaunch({
-        url: 'setting/realuth',
+        url,
       })
     }
   },

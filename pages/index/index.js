@@ -75,6 +75,7 @@ Page({
         }else{
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       },
@@ -118,6 +119,7 @@ Page({
         } else {
           wx.showToast({
             title: res.data.errMsg,
+            mask: true,
           })
         }
       }
