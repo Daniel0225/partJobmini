@@ -160,6 +160,9 @@ Page({
    */
   getCollectWork:function(e){
     var that = this;
+    if (app.globalData.userId === '0000000000000000') {
+      return
+    }
     var location = this.data.location.split(",")
     wx.showLoading({
       title: '正在请求',
@@ -189,6 +192,14 @@ Page({
    * 收藏按钮点击
    */
   clickCollect:function(e){
+    if (app.globalData.userId === '0000000000000000') {
+      wx.showToast({
+        title: '请先绑定手机',
+        icon: 'none',
+        mask: true,
+      })
+      return
+    }
     console.log(e.currentTarget.dataset.position)
     let temp = 'items[' + e.currentTarget.dataset.position + '].isCollect'
     let isCollect = this.data.items[e.currentTarget.dataset.position].isCollect
