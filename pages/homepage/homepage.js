@@ -33,7 +33,9 @@ Page({
           poiName:data.poisData[0].name,
           location: data.poisData[0].location,
         })
-        that.getWorks()
+        app.wxLogin(function() {
+          that.getWorks()
+        })
       },
       fail:function(info){
         console.log(info)

@@ -51,6 +51,7 @@ Page({
     if ($this.data.type === '1') {
       if (app.globalData.userId !== defaultUserId) {
         api = 'user/updMobile'
+        title = '换绑成功'
       } else {
         api = 'miniprogram/bindMobile'
       }
@@ -59,9 +60,17 @@ Page({
       wx.showToast({
         title,
         complete: function() {
-          wx.reLaunch({
-            url: dumpPage,
-          })
+          if (api === 'miniprogram/bindMobile') {
+            app.wxLogin(function() {
+              wx.reLaunch({
+                url: dumpPage,
+              })
+            })
+          } else {
+            wx.reLaunch({
+              url: dumpPage,
+            })
+          }
         }
       })
     })

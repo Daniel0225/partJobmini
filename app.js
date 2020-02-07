@@ -5,11 +5,12 @@ App({
     appid: 1002,
     secret: '2ad6a6927456476b6dcbfaf4e1eb42a3',
     host: 'http://106.13.38.140:7001/' // 这个地方填写你的域名
+    // host: 'http://127.0.0.1:7001/'
   },
   onLaunch: function () {
     const that = this
     // 登录
-    that.wxLogin()
+    // that.wxLogin()
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -36,16 +37,16 @@ App({
       }
     })
   },
-  wxLogin: function () {
+  wxLogin: function (fn) {
     var that = this
     wx.login({
       success: res => {
-        that.getToken(res.code)
+        that.getToken(res.code, fn)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
   },
-  getToken: function (code) {
+  getToken: function (code, fn) {
     var that = this
     var timestamp = Date.parse(new Date());
     wx.showLoading({
@@ -62,7 +63,7 @@ App({
       success: function (res) {
         console.log(res)
         if (res.data.errNo == 200) {
-          that.login(res.data.data.token, code)
+          that.login(res.data.data.token, code, fn)
         } else {
           wx.showToast({
             title: res.data.errMsg,
@@ -74,7 +75,7 @@ App({
       }
     })
   },
-  login: function (token, code) {
+  login: function (token, code, fn) {
     var that = this
     wx.request({
       url: that.config.host + 'miniprogram/authcode2Session',
@@ -89,6 +90,9 @@ App({
           that.globalData.openid = res.data.data.openid
           that.globalData.token = res.data.data.uToken
           that.globalData.userId = res.data.data.userId
+          if (typeof(fn) === 'function') {
+            fn()
+          }
         } else {
           wx.showToast({
             title: res.data.errMsg,
